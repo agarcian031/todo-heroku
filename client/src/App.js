@@ -48,7 +48,7 @@ function App() {
             />
           </Form>
           <List>
-            {todos.map((t, i) => <List.Item key={t.id} style={t.complete && styles.complete} onClick={() => updateTodo(t.id)}>{t.name}</List.Item>)}
+            {todos.map((t, i) => <List.Item key={t.id} style={t.complete ? styles.complete : {}} onClick={() => updateTodo(t.id)}>{t.name}</List.Item>)}
           </List>
       </Segment>
       
